@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://lgg34idlyc6l"]
+
+[ext_resource type="SpriteFrames" uid="uid://gi5fpk1xb4qe" path="res://Content/Actors/Campfire/campfire.tres" id="1_x5ptu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1mo2e"]
+size = Vector2(16, 16)
+
+[node name="Campfire" type="Node2D"]
+texture_filter = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_x5ptu")
+autoplay = "default"
+frame = 4
+frame_progress = 0.951385
+
+[node name="StaticBody2D" type="StaticBody2D" parent="AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/StaticBody2D"]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_1mo2e")
