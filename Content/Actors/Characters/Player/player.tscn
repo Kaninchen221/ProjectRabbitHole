@@ -4,21 +4,27 @@
 [ext_resource type="SpriteFrames" uid="uid://ce6ulepsxv4r1" path="res://Content/Actors/Characters/Player/player.tres" id="1_pg0bq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lkboc"]
-size = Vector2(11, 15)
+size = Vector2(14, 5)
 
 [node name="Player" type="Node2D"]
+y_sort_enabled = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+y_sort_enabled = true
 texture_filter = 1
+position = Vector2(0, -8)
 script = ExtResource("1_m41uf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 unique_name_in_owner = true
+y_sort_enabled = true
+position = Vector2(0, 8)
 sprite_frames = ExtResource("1_pg0bq")
-animation = &"Walking_Down"
+animation = &"Idle_Down"
+offset = Vector2(0, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0.5, -0.5)
+position = Vector2(0, 5.5)
 shape = SubResource("RectangleShape2D_lkboc")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
