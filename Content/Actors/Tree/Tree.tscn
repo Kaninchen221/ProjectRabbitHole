@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsqy6xpl5oum2"]
+
+[ext_resource type="Texture2D" uid="uid://chaxyox5shr7y" path="res://Content/TileSets/Textures/enviro_outdoor.png" id="1_pfqcx"]
+[ext_resource type="Script" path="res://Content/Actors/Tree/Tree.gd" id="2_f2ew6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1go5p"]
+size = Vector2(14, 6)
+
+[node name="Tree" type="Node2D"]
+z_index = 2
+y_sort_enabled = true
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture = ExtResource("1_pfqcx")
+offset = Vector2(0, -20)
+flip_h = true
+region_enabled = true
+region_rect = Rect2(48, 0, 48, 48)
+script = ExtResource("2_f2ew6")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+y_sort_enabled = true
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_1go5p")
