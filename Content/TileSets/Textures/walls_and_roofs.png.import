@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmq6o30jhw06l"
-path="res://.godot/imported/ground.png-0072085104c464cb8cd27174396694be.ctex"
+uid="uid://c4lfakyyxxyn"
+path="res://.godot/imported/walls_and_roofs.png-c2226069494e7c4ccd4d9b86f0d05ae1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Content/TileSets/Outdoor/ground.png"
-dest_files=["res://.godot/imported/ground.png-0072085104c464cb8cd27174396694be.ctex"]
+source_file="res://Content/TileSets/Textures/walls_and_roofs.png"
+dest_files=["res://.godot/imported/walls_and_roofs.png-c2226069494e7c4ccd4d9b86f0d05ae1.ctex"]
 
 [params]
 
