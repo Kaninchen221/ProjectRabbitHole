@@ -25,7 +25,7 @@ tile_set = ExtResource("1_c5oju")
 
 [node name="Player" parent="." groups=["Characters"] instance=ExtResource("3_ps5i1")]
 z_index = 2
-position = Vector2(1472, 1387)
+position = Vector2(1417, 1412)
 
 [node name="Campfire" parent="." instance=ExtResource("2_p44cn")]
 position = Vector2(1244, 1172)

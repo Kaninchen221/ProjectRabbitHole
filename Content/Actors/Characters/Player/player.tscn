@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://fo4f11t4r7qa"]
+[gd_scene load_steps=5 format=3 uid="uid://fo4f11t4r7qa"]
 
 [ext_resource type="Script" path="res://Content/Actors/Characters/Player/player.gd" id="1_m41uf"]
 [ext_resource type="SpriteFrames" uid="uid://ce6ulepsxv4r1" path="res://Content/Actors/Characters/Player/player.tres" id="1_pg0bq"]
+[ext_resource type="Script" path="res://Content/Actors/Characters/Player/debug_info.gd" id="3_t1gfu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lkboc"]
 size = Vector2(14, 5)
@@ -30,3 +31,13 @@ shape = SubResource("RectangleShape2D_lkboc")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(3, 3)
+
+[node name="Label" type="Label" parent="CharacterBody2D"]
+z_index = 100
+offset_left = -191.0
+offset_top = -108.0
+offset_right = -97.0
+offset_bottom = -85.0
+scale = Vector2(0.5, 0.5)
+text = "FPS Counter"
+script = ExtResource("3_t1gfu")
