@@ -38,6 +38,12 @@ Player_Move_Down={
 ]
 }
 
+[layer_names]
+
+2d_render/layer_1="BlockPlayer"
+2d_physics/layer_1="BlockCharacters"
+2d_physics/layer_2="OverlapCharacters"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

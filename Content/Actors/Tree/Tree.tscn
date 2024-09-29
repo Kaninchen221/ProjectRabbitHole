@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsqy6xpl5oum2"]
+[gd_scene load_steps=5 format=3 uid="uid://dsqy6xpl5oum2"]
 
 [ext_resource type="Texture2D" uid="uid://chaxyox5shr7y" path="res://Content/TileSets/Textures/enviro_outdoor.png" id="1_pfqcx"]
 [ext_resource type="Script" path="res://Content/Actors/Tree/Tree.gd" id="2_f2ew6"]
@@ -6,12 +6,16 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1go5p"]
 size = Vector2(14, 6)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a50ch"]
+size = Vector2(26, 31)
+
 [node name="Tree" type="Node2D"]
 z_index = 2
 y_sort_enabled = true
 texture_filter = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Tree" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 y_sort_enabled = true
 texture = ExtResource("1_pfqcx")
 offset = Vector2(0, -20)
@@ -20,10 +24,41 @@ region_enabled = true
 region_rect = Rect2(48, 0, 48, 48)
 script = ExtResource("2_f2ew6")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Base" type="Sprite2D" parent="Tree"]
 y_sort_enabled = true
+position = Vector2(0, -6)
+texture = ExtResource("1_pfqcx")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(16, 112, 16, 12)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="Shadow" type="Sprite2D" parent="Tree"]
+y_sort_enabled = true
+position = Vector2(0, 5)
+texture = ExtResource("1_pfqcx")
+offset = Vector2(0, -8)
+flip_h = true
+region_enabled = true
+region_rect = Rect2(128, 0, 32, 16)
+
+[node name="Collision" type="StaticBody2D" parent="."]
+y_sort_enabled = true
+input_pickable = true
+
+[node name="CollisionShapeCollision" type="CollisionShape2D" parent="Collision"]
 y_sort_enabled = true
 position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_1go5p")
+
+[node name="Visibility" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShapeVisibility" type="CollisionShape2D" parent="Visibility"]
+visible = false
+y_sort_enabled = true
+position = Vector2(0, -21.5)
+shape = SubResource("RectangleShape2D_a50ch")
+
+[connection signal="body_entered" from="Visibility" to="Tree" method="_on_visibility_body_entered"]
+[connection signal="body_exited" from="Visibility" to="Tree" method="_on_visibility_body_exited"]

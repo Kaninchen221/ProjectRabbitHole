@@ -13,6 +13,7 @@ y_sort_enabled = true
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(0, -8)
+collision_layer = 3
 script = ExtResource("1_m41uf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
@@ -28,4 +29,4 @@ position = Vector2(0, 5.5)
 shape = SubResource("RectangleShape2D_lkboc")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-zoom = Vector2(2, 2)
+zoom = Vector2(3, 3)

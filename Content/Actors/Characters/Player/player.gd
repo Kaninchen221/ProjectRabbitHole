@@ -49,7 +49,7 @@ func movement(delta):
 		velocity += input * ACCELERATION * delta
 		velocity = velocity.limit_length(MAX_SPEED)
 	
-	var collided = move_and_slide()
+	var  _collided = move_and_slide()
 	#if collided:
 		#velocity = Vector2.ZERO
 
