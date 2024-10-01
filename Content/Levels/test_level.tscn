@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://ce5jwi13biqjb"]
+[gd_scene load_steps=7 format=4 uid="uid://ce5jwi13biqjb"]
 
 [ext_resource type="TileSet" uid="uid://crb2kttog7l1l" path="res://Content/TileSets/TileSet.tres" id="1_c5oju"]
+[ext_resource type="PackedScene" uid="uid://ce4mc1cu44lx8" path="res://Content/Actors/Light/DayNight/DayNight.tscn" id="1_jusmo"]
 [ext_resource type="PackedScene" uid="uid://lgg34idlyc6l" path="res://Content/Actors/Campfire/campfire.tscn" id="2_p44cn"]
 [ext_resource type="PackedScene" uid="uid://fo4f11t4r7qa" path="res://Content/Actors/Characters/Player/player.tscn" id="3_ps5i1"]
 [ext_resource type="PackedScene" uid="uid://brgsfrxy8anod" path="res://Content/Actors/Houses/village_house_0.tscn" id="4_qks4f"]
@@ -9,6 +10,12 @@
 [node name="TestLevel" type="Node2D"]
 y_sort_enabled = true
 texture_filter = 1
+
+[node name="DayNight" parent="." instance=ExtResource("1_jusmo")]
+max_light_energy = 0.9
+direction_light_energy = 1.0
+pause = false
+time_modifier = 0.1
 
 [node name="EnviroTileMap2" type="Node2D" parent="."]
 
@@ -25,13 +32,16 @@ tile_set = ExtResource("1_c5oju")
 
 [node name="Player" parent="." groups=["Characters"] instance=ExtResource("3_ps5i1")]
 z_index = 2
-position = Vector2(1417, 1412)
+position = Vector2(1416, 1432)
 
 [node name="Campfire" parent="." instance=ExtResource("2_p44cn")]
+z_index = 2
+y_sort_enabled = true
 position = Vector2(1244, 1172)
 
 [node name="Campfire2" parent="." instance=ExtResource("2_p44cn")]
 z_index = 2
+y_sort_enabled = true
 position = Vector2(1433, 1427)
 
 [node name="Houses" type="Node2D" parent="."]

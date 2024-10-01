@@ -1,21 +1,28 @@
 [gd_scene load_steps=3 format=3 uid="uid://lgg34idlyc6l"]
 
+[ext_resource type="PackedScene" uid="uid://c5h5354sqrxsj" path="res://Content/Actors/Light/PointLight/PointLight.tscn" id="1_chxeb"]
 [ext_resource type="SpriteFrames" uid="uid://gi5fpk1xb4qe" path="res://Content/Actors/Campfire/campfire.tres" id="1_x5ptu"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1mo2e"]
-size = Vector2(16, 16)
 
 [node name="Campfire" type="Node2D"]
 texture_filter = 1
 
+[node name="PointLight" parent="." instance=ExtResource("1_chxeb")]
+position = Vector2(0, -1)
+min_light_energy = 0.108
+max_light_energy = 0.205
+pause = false
+time_modifier = 0.1
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 sprite_frames = ExtResource("1_x5ptu")
 autoplay = "default"
 frame = 4
 frame_progress = 0.951385
+offset = Vector2(0, -6)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="AnimatedSprite2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/StaticBody2D"]
-position = Vector2(0, 8)
-shape = SubResource("RectangleShape2D_1mo2e")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AnimatedSprite2D/StaticBody2D"]
+position = Vector2(0, -6)
+polygon = PackedVector2Array(-8, 7, -6, 5, -4, 4, 6, 4, 8, 6, 8, 11, 7, 13, 5, 14, 3, 15, -2, 15, -6, 13, -7, 12, -8, 10)
