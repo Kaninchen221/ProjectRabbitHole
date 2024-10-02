@@ -5,6 +5,7 @@
 [ext_resource type="Curve" uid="uid://clbrysnl3povm" path="res://Content/Actors/Light/PointLight/pulsating_light.tres" id="3_7cyav"]
 
 [node name="PointLight" type="PointLight2D"]
+scale = Vector2(11.9908, 11.9908)
 energy = 0.2
 range_z_min = -2048
 range_z_max = 2048
@@ -12,7 +13,6 @@ range_layer_min = -512
 range_layer_max = 512
 shadow_enabled = true
 texture = ExtResource("1_6wh5j")
-texture_scale = 12.0
 script = ExtResource("2_pgpto")
 curve = ExtResource("3_7cyav")
 min_light_energy = 0.1

@@ -12,9 +12,10 @@ y_sort_enabled = true
 texture_filter = 1
 
 [node name="DayNight" parent="." instance=ExtResource("1_jusmo")]
+scale = Vector2(1.34231, 1.39067)
 max_light_energy = 0.9
+time = 0.205
 direction_light_energy = 1.0
-pause = false
 time_modifier = 0.1
 
 [node name="EnviroTileMap2" type="Node2D" parent="."]
@@ -32,7 +33,7 @@ tile_set = ExtResource("1_c5oju")
 
 [node name="Player" parent="." groups=["Characters"] instance=ExtResource("3_ps5i1")]
 z_index = 2
-position = Vector2(1416, 1432)
+position = Vector2(1416, 1408)
 
 [node name="Campfire" parent="." instance=ExtResource("2_p44cn")]
 z_index = 2
@@ -42,7 +43,7 @@ position = Vector2(1244, 1172)
 [node name="Campfire2" parent="." instance=ExtResource("2_p44cn")]
 z_index = 2
 y_sort_enabled = true
-position = Vector2(1433, 1427)
+position = Vector2(1432, 1416)
 
 [node name="Houses" type="Node2D" parent="."]
 y_sort_enabled = true

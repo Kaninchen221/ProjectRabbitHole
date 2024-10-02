@@ -9,7 +9,7 @@ texture_filter = 1
 [node name="PointLight" parent="." instance=ExtResource("1_chxeb")]
 position = Vector2(0, -1)
 min_light_energy = 0.108
-max_light_energy = 0.205
+max_light_energy = 0.28
 pause = false
 time_modifier = 0.1
 

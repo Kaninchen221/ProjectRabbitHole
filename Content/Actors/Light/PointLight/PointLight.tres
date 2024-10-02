@@ -6,9 +6,11 @@ colors = PackedColorArray(1, 1, 1, 1, 0.878676, 0.878676, 0.878676, 1, 0, 0, 0, 
 
 [resource]
 gradient = SubResource("Gradient_f0wr1")
+width = 128
+height = 128
 use_hdr = true
 fill = 1
 fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.4, 0.6)
+fill_to = Vector2(0.45, 0.55)
+metadata/_snap_count = 20
 metadata/_snap_enabled = true
-metadata/_snap_count = 15
