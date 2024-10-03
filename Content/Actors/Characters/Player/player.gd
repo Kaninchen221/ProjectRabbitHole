@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-const MAX_SPEED = 30
+const max_speed = 30
+const max_speed_run = 60
 var speed = 0
 const ACCELERATION = 1500
 const FRICTION = 600
@@ -14,7 +15,7 @@ func _physics_process(delta):
 	animations()
 	last_movement_direction = movement_direction
 
-func get_input():
+func get_movement_input():
 	var input = Vector2.ZERO
 	var movement_right = int(Input.is_action_pressed("Player_Move_Right"))
 	var movement_left = int(Input.is_action_pressed("Player_Move_Left"))
@@ -30,14 +31,12 @@ func get_input():
 	
 	return input.normalized()
 
+func get_movement_run() -> bool:
+	var run = bool(Input.is_action_pressed("Player_Move_Run"))
+	return run
+
 func movement(delta):
-	var input = get_input()
-	
-	#if input == Vector2.ZERO and velocity.length() > 0.01:
-	#	velocity -= velocity.normalized() * (FRICTION * delta)
-	#else:
-	#	velocity += input * ACCELERATION * delta
-	#	velocity = velocity.limit_length(MAX_SPEED)
+	var input = get_movement_input()
 	
 	if input.x == 0:
 		velocity.x = 0
@@ -47,11 +46,12 @@ func movement(delta):
 		
 	if input != Vector2.ZERO:
 		velocity += input * ACCELERATION * delta
-		velocity = velocity.limit_length(MAX_SPEED)
+		if get_movement_run():
+			velocity = velocity.limit_length(max_speed_run)
+		else:
+			velocity = velocity.limit_length(max_speed)
 	
 	var  _collided = move_and_slide()
-	#if collided:
-		#velocity = Vector2.ZERO
 
 enum Movement_Direction {Idle, Up, Right, Down, Left}
 func get_movement_direction():
