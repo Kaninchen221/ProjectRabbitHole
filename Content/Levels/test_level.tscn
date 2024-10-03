@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://ce5jwi13biqjb"]
+[gd_scene load_steps=6 format=4 uid="uid://ce5jwi13biqjb"]
 
 [ext_resource type="TileSet" uid="uid://crb2kttog7l1l" path="res://Content/TileSets/TileSet.tres" id="1_c5oju"]
-[ext_resource type="PackedScene" uid="uid://ce4mc1cu44lx8" path="res://Content/Actors/Light/DayNight/DayNight.tscn" id="1_jusmo"]
 [ext_resource type="PackedScene" uid="uid://lgg34idlyc6l" path="res://Content/Actors/Campfire/campfire.tscn" id="2_p44cn"]
 [ext_resource type="PackedScene" uid="uid://fo4f11t4r7qa" path="res://Content/Actors/Characters/Player/player.tscn" id="3_ps5i1"]
 [ext_resource type="PackedScene" uid="uid://brgsfrxy8anod" path="res://Content/Actors/Houses/village_house_0.tscn" id="4_qks4f"]
@@ -10,13 +9,6 @@
 [node name="TestLevel" type="Node2D"]
 y_sort_enabled = true
 texture_filter = 1
-
-[node name="DayNight" parent="." instance=ExtResource("1_jusmo")]
-scale = Vector2(1.34231, 1.39067)
-max_light_energy = 0.9
-time = 0.205
-direction_light_energy = 1.0
-time_modifier = 0.1
 
 [node name="EnviroTileMap2" type="Node2D" parent="."]
 
