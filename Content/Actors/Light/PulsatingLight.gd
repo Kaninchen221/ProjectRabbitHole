@@ -6,7 +6,7 @@ extends PointLight2D
 @export_range(0, 1) var time : float
 @export_range(-1, 1, 2) var direction_light_energy : float
 @export var pause : bool = true
-@export_range(-1000, 1000) var time_modifier : float
+@export_range(0.0, 100.0) var time_modifier : float
 
 var diff_light_energy
 func _ready() -> void:
