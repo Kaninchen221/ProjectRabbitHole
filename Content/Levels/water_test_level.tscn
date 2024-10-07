@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=4 uid="uid://b052wkg0gsvd6"]
+
+[ext_resource type="Shader" uid="uid://b71jai0cp5424" path="res://Content/Water/shader_water_2d.tres" id="1_186l0"]
+[ext_resource type="TileSet" uid="uid://crb2kttog7l1l" path="res://Content/TileSets/Legacy.tres" id="2_hy7kl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v0pyl"]
+shader = ExtResource("1_186l0")
+
+[node name="WaterTestLevel" type="Node2D"]
+
+[node name="Lake" type="TileMapLayer" parent="."]
+material = SubResource("ShaderMaterial_v0pyl")
+position = Vector2(-1, -1)
+tile_map_data = PackedByteArray("AAD/////AAABAAcAAAD//wAAAAABAAcAAAAAAAAAAAABAAcAAAABAAAAAAABAAcAAAACAAAAAAABAAcAAAACAP//AAABAAcAAAABAP//AAABAAcAAAABAP7/AAABAAcAAAAAAP7/AAABAAcAAAAAAP//AAABAAcAAAD//wEAAAABAAcAAAAAAAEAAAABAAcAAAABAAEAAAABAAcAAAD///7/AAABAAcAAAD+////AAABAAcAAAD+/wAAAAABAAcAAAACAAEAAAABAAcAAAADAAAAAAABAAcAAAADAP//AAABAAcAAAACAP7/AAABAAcAAAD+//7/AAABAAcAAAD9////AAABAAcAAAD9/wAAAAABAAcAAAD+/wEAAAABAAcAAAADAAEAAAABAAcAAAAEAAAAAAABAAcAAAADAP7/AAABAAcAAAD9//7/AAABAAcAAAD9/wEAAAABAAcAAAAEAAEAAAABAAcAAAAEAP//AAABAAcAAAAEAP7/AAABAAcAAAA=")
+tile_set = ExtResource("2_hy7kl")
