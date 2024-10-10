@@ -1,27 +1,72 @@
-[gd_scene load_steps=3 format=3 uid="uid://cqsssjatw2vqb"]
+[gd_scene load_steps=7 format=3 uid="uid://cqsssjatw2vqb"]
 
-[ext_resource type="PackedScene" uid="uid://dlcginnwnge3y" path="res://Content/Actors/Characters/Player2/player.tscn" id="2_4q2c7"]
 [ext_resource type="Texture2D" uid="uid://drbvtpqtu2nwt" path="res://Content/TileSets/Textures/tower.png" id="2_dpbxs"]
+[ext_resource type="Texture2D" uid="uid://bxchuxu2o602r" path="res://Content/TileSets/Textures/tower_front_wall.png" id="3_lmlwd"]
+[ext_resource type="PackedScene" uid="uid://ce4mc1cu44lx8" path="res://Content/Actors/Light/DayNight/DayNight.tscn" id="4_0eww3"]
+[ext_resource type="PackedScene" uid="uid://fo4f11t4r7qa" path="res://Content/Actors/Characters/Player2D/player.tscn" id="5_lo02p"]
+[ext_resource type="PackedScene" uid="uid://c5h5354sqrxsj" path="res://Content/Actors/Light/PointLight/PointLight.tscn" id="5_x8dbr"]
+[ext_resource type="Script" path="res://Content/Actors/Characters/Player2/player.gd" id="6_6eup4"]
 
 [node name="TestLevelTower" type="Node2D"]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(352, 380)
-zoom = Vector2(1.8, 1.8)
 
 [node name="Tower" type="Sprite2D" parent="."]
 position = Vector2(343, 361)
 scale = Vector2(0.146383, 0.146383)
 texture = ExtResource("2_dpbxs")
 
-[node name="Area2D" type="Area2D" parent="Tower"]
+[node name="TowerFrontWall" type="Sprite2D" parent="Tower"]
+z_index = 1
+position = Vector2(0, 7.05719e-05)
+texture = ExtResource("3_lmlwd")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Tower"]
+visible = false
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tower/StaticBody2D"]
+[node name="BaseFloor" type="CollisionPolygon2D" parent="Tower/StaticBody2D"]
 position = Vector2(-14.5596, 246.92)
 scale = Vector2(17.8534, 12.9548)
 polygon = PackedVector2Array(-19.0817, 22.5986, -17.5512, 24.7079, -15.2553, 24.7079, -14.4901, 31.0358, -11.0463, 42.637, -7.21991, 46.8556, -4.1588, 48.9649, 1.19815, 51.0742, 5.40718, 52.1288, 11.1468, 52.6561, 13.4426, 52.6561, 13.4426, 51.6015, 13.06, 51.0742, 1.5808, 46.3282, 0.815506, 44.7463, -1.86296, 43.1643, -3.01088, 41.5823, -7.21991, 38.9457, -4.54144, 33.1451, 0.815506, 36.8364, 3.87663, 38.4184, 7.70302, 41.055, 10.7641, 42.637, 13.4426, 44.7463, 15.7384, 44.2189, 19.9475, 42.1096, 23.3912, 39.473, 24.1565, 40.5276, 25.3044, 41.5823, 26.4523, 41.055, 27.2176, 40.0003, 27.9829, 37.891, 28.3655, 33.6724, 29.5135, 31.0358, 31.044, 27.8718, 32.9572, 24.7079, 36.401, 20.4893, 37.5489, 17.8527, 36.7836, 12.5794, 35.2531, 9.94276, 32.1919, 8.36079, 17.269, 4.66953, 7.70302, 4.1422, -5.68935, 7.30615, -13.7248, 10.9974, -15.638, 12.0521, -17.5512, 12.0521, -18.3165, 12.5794, -19.0817, 13.634, -19.0817, 14.6887)
 
-[node name="Player" parent="." instance=ExtResource("2_4q2c7")]
-position = Vector2(204, 465)
+[node name="TowerHole" type="CollisionPolygon2D" parent="Tower/StaticBody2D"]
+polygon = PackedVector2Array(27.3257, -471.366, 6.8313, -478.198, 6.8313, -491.86, 34.157, -512.355, 40.9883, -512.355, 68.314, -505.523, 88.8081, -498.692, 109.302, -498.692, 102.471, -485.029, 102.471, -464.535, 95.6394, -457.703, 68.314, -457.703, 40.9883, -464.535)
+
+[node name="TowerUpperPart" type="CollisionPolygon2D" parent="Tower/StaticBody2D"]
+build_mode = 1
+polygon = PackedVector2Array(-225.436, -628.488, -198.11, -648.982, -150.291, -676.308, -102.471, -696.802, -40.9883, -717.296, 6.8313, -724.128, 75.1453, -730.959, 177.616, -730.959, 225.436, -730.959, 273.256, -724.128, 300.581, -724.128, 293.75, -676.308, 382.558, -621.657, 450.872, -594.331, 457.703, -567.006, 485.029, -553.343, 546.511, -532.849, 567.006, -519.186, 539.68, -491.86, 498.692, -457.703, 430.378, -423.546, 341.57, -409.884, 245.93, -403.052, 129.796, -409.884, 0, -423.546, -88.8081, -444.041, -170.785, -478.198, -232.267, -512.355, -259.593, -553.343, -259.593, -594.331)
+
+[node name="Dimming" parent="." instance=ExtResource("4_0eww3")]
+position = Vector2(353, 407)
+scale = Vector2(0.3403, 0.174033)
+min_light_energy = 0.44
+max_light_energy = 0.56
+time_modifier = 0.335
+
+[node name="PointLight_Door" parent="." instance=ExtResource("5_x8dbr")]
+position = Vector2(339, 452)
+scale = Vector2(4, 4)
+energy = 0.76
+script = null
+
+[node name="PointLight_Window" parent="." instance=ExtResource("5_x8dbr")]
+position = Vector2(406, 382)
+scale = Vector2(2, 2)
+energy = 0.6
+script = null
+
+[node name="PointLight_Window2" parent="." instance=ExtResource("5_x8dbr")]
+position = Vector2(352, 291)
+scale = Vector2(3, 3)
+energy = 0.6
+script = null
+
+[node name="Player" parent="." instance=ExtResource("5_lo02p")]
+position = Vector2(368, 282)
+
+[node name="CharacterBody2D" parent="Player" index="0"]
+position = Vector2(-92, 193)
+script = ExtResource("6_6eup4")
+
+[node name="DayNight" parent="Player/CharacterBody2D" index="4"]
+visible = false
+
+[editable path="Player"]

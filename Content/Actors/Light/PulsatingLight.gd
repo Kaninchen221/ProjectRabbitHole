@@ -1,8 +1,8 @@
 extends PointLight2D
 
 @export var curve: Curve
-@export_range(0, 1) var min_light_energy : float
-@export_range(0, 1) var max_light_energy : float
+@export_range(0, 1) var min_light_energy : float = 0
+@export_range(0, 1) var max_light_energy : float = 1
 @export_range(0, 1) var time : float
 @export_range(-1, 1, 2) var direction_light_energy : float
 @export var pause : bool = true
