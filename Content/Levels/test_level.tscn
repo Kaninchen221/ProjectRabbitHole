@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://crb2kttog7l1l" path="res://Content/TileSets/Legacy.tres" id="1_c5oju"]
 [ext_resource type="TileSet" uid="uid://bjsmiaxkqstgo" path="res://Content/TileSets/Ground.tres" id="1_gths5"]
 [ext_resource type="PackedScene" uid="uid://lgg34idlyc6l" path="res://Content/Actors/Campfire/campfire.tscn" id="2_p44cn"]
-[ext_resource type="PackedScene" uid="uid://fo4f11t4r7qa" path="res://Content/Actors/Characters/Player2D/player.tscn" id="3_ps5i1"]
+[ext_resource type="PackedScene" uid="uid://fo4f11t4r7qa" path="res://Content/Actors/Characters/Player/player.tscn" id="3_ps5i1"]
 [ext_resource type="PackedScene" uid="uid://brgsfrxy8anod" path="res://Content/Actors/Houses/village_house_0.tscn" id="4_qks4f"]
 [ext_resource type="PackedScene" uid="uid://dsqy6xpl5oum2" path="res://Content/Actors/Tree/Tree.tscn" id="5_83k7g"]
 
