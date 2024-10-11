@@ -46,9 +46,7 @@ text = "FPS Counter"
 script = ExtResource("3_t1gfu")
 
 [node name="DayNight" parent="CharacterBody2D" instance=ExtResource("5_8ytfh")]
-position = Vector2(0, 0)
-scale = Vector2(0.394923, 0.248286)
+scale = Vector2(0.147461, 0.0947695)
 max_light_energy = 0.9
-time = 0.22
-direction_light_energy = 1.0
 time_modifier = 0.1
+time = 0.22

@@ -37,10 +37,9 @@ z_index = 2
 position = Vector2(1446, 1415)
 
 [node name="DayNight" parent="Player/CharacterBody2D" index="4"]
-energy = 0.317
-min_light_energy = 0.317
-time_modifier = 0.535
-time = 0.165
+energy = 0.1
+min_light_energy = 0.1
+time = 0.153942
 
 [node name="Campfire" parent="." instance=ExtResource("2_p44cn")]
 z_index = 2

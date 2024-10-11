@@ -3,22 +3,23 @@
 [ext_resource type="Script" path="res://Content/Actors/Light/PulsatingLight.gd" id="1_0p434"]
 [ext_resource type="Curve" uid="uid://ueoxhb33bis0" path="res://Content/Actors/Light/DayNight/DayNight.tres" id="2_xbhnr"]
 
-[sub_resource type="Gradient" id="Gradient_8mp2q"]
-offsets = PackedFloat32Array(0.525735)
+[sub_resource type="Gradient" id="Gradient_uf21w"]
+offsets = PackedFloat32Array(1)
 colors = PackedColorArray(1, 1, 1, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_0kibj"]
-gradient = SubResource("Gradient_8mp2q")
-fill_from = Vector2(0.970085, 0.995726)
-fill_to = Vector2(0.880342, 0.893162)
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wyr2k"]
+gradient = SubResource("Gradient_uf21w")
+width = 128
+height = 128
+fill_to = Vector2(1, 1)
 
 [node name="Dimming" type="PointLight2D"]
-position = Vector2(1349, 1184)
-scale = Vector2(1.34979, 1.39067)
-energy = 0.3
+scale = Vector2(4, 4)
+energy = 0.4
 blend_mode = 1
-texture = SubResource("GradientTexture2D_0kibj")
+texture = SubResource("GradientTexture2D_wyr2k")
 texture_scale = 50.0
 script = ExtResource("1_0p434")
 curve = ExtResource("2_xbhnr")
 min_light_energy = 0.4
+direction_light_energy = 1.0

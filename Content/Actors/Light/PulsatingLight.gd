@@ -10,6 +10,10 @@ extends PointLight2D
 @export_range(0, 1) var time : float
 
 func _process(delta: float) -> void:
+	if not is_visible_in_tree():
+		set_energy(0)
+		return
+	
 	if time >= 1:
 		time = 1
 		direction_light_energy = -1
