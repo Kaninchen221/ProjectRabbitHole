@@ -37,10 +37,10 @@ z_index = 2
 position = Vector2(1446, 1415)
 
 [node name="DayNight" parent="Player/CharacterBody2D" index="4"]
-visible = false
+energy = 0.317
 min_light_energy = 0.317
-time = 0.0
-time_modifier = 0.05
+time_modifier = 0.535
+time = 0.165
 
 [node name="Campfire" parent="." instance=ExtResource("2_p44cn")]
 z_index = 2
@@ -57,9 +57,6 @@ y_sort_enabled = true
 
 [node name="Village_house_0" parent="Houses" instance=ExtResource("4_qks4f")]
 position = Vector2(1479, 1333)
-
-[node name="Village_house_1" parent="Houses" instance=ExtResource("4_qks4f")]
-position = Vector2(1049, 1201)
 
 [node name="Village_house_2" parent="Houses" instance=ExtResource("4_qks4f")]
 position = Vector2(1366, 1585)
