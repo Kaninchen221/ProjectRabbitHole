@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://cny30xr18rqqo"]
+
+[ext_resource type="Script" path="res://Content/Scripts/HideUnhide.gd" id="1_favkk"]
+[ext_resource type="SpriteFrames" uid="uid://ce6ulepsxv4r1" path="res://Content/Actors/Characters/Player/player.tres" id="2_0mwdw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3invy"]
+size = Vector2(14, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_omjua"]
+size = Vector2(80, 80)
+
+[node name="Npc" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(0, -8)
+
+[node name="LabelName" type="Label" parent="CharacterBody2D"]
+offset_left = -23.0
+offset_top = -21.0
+offset_right = 227.0
+offset_bottom = 46.0
+scale = Vector2(0.188139, 0.188139)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 42
+text = "NPC NAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("1_favkk")
+current_alpha = 0.0
+min_alpha = 0.0
+direction = -1
+time_modifier = 4.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+y_sort_enabled = true
+position = Vector2(0, 8)
+sprite_frames = ExtResource("2_0mwdw")
+animation = &"Idle_Down"
+offset = Vector2(0, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_3invy")
+
+[node name="Visibility" type="Area2D" parent="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="Area" type="CollisionShape2D" parent="CharacterBody2D/Visibility"]
+scale = Vector2(1.00327, 1)
+shape = SubResource("RectangleShape2D_omjua")
+
+[connection signal="body_entered" from="CharacterBody2D/Visibility" to="CharacterBody2D/LabelName" method="_on_visibility_body_entered"]
+[connection signal="body_exited" from="CharacterBody2D/Visibility" to="CharacterBody2D/LabelName" method="_on_visibility_body_exited"]

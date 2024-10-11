@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://ce5jwi13biqjb"]
+[gd_scene load_steps=8 format=4 uid="uid://ce5jwi13biqjb"]
 
 [ext_resource type="TileSet" uid="uid://crb2kttog7l1l" path="res://Content/TileSets/Legacy.tres" id="1_c5oju"]
 [ext_resource type="TileSet" uid="uid://bjsmiaxkqstgo" path="res://Content/TileSets/Ground.tres" id="1_gths5"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://fo4f11t4r7qa" path="res://Content/Actors/Characters/Player/player.tscn" id="3_ps5i1"]
 [ext_resource type="PackedScene" uid="uid://brgsfrxy8anod" path="res://Content/Actors/Houses/village_house_0.tscn" id="4_qks4f"]
 [ext_resource type="PackedScene" uid="uid://dsqy6xpl5oum2" path="res://Content/Actors/Tree/Tree.tscn" id="5_83k7g"]
+[ext_resource type="PackedScene" uid="uid://cny30xr18rqqo" path="res://Content/Actors/Characters/NPC/npc.tscn" id="7_3tsod"]
 
 [node name="TestLevel" type="Node2D"]
 y_sort_enabled = true
@@ -34,7 +35,7 @@ tile_set = ExtResource("1_c5oju")
 
 [node name="Player" parent="." groups=["Characters"] instance=ExtResource("3_ps5i1")]
 z_index = 2
-position = Vector2(1446, 1415)
+position = Vector2(1449, 1427)
 
 [node name="DayNight" parent="Player/CharacterBody2D" index="4"]
 energy = 0.1
@@ -58,7 +59,7 @@ y_sort_enabled = true
 position = Vector2(1479, 1333)
 
 [node name="Village_house_2" parent="Houses" instance=ExtResource("4_qks4f")]
-position = Vector2(1366, 1585)
+position = Vector2(1367, 1581)
 
 [node name="Village_house_3" parent="Houses" instance=ExtResource("4_qks4f")]
 position = Vector2(1607, 1515)
@@ -71,4 +72,20 @@ tile_set = ExtResource("1_c5oju")
 [node name="Tree" parent="." instance=ExtResource("5_83k7g")]
 position = Vector2(1492, 1395)
 
+[node name="NPC_matylda" parent="." instance=ExtResource("7_3tsod")]
+z_index = 2
+position = Vector2(1375, 1566)
+
+[node name="LabelName" parent="NPC_matylda/CharacterBody2D" index="0"]
+text = "Matylda"
+
+[node name="NPC_harold" parent="." instance=ExtResource("7_3tsod")]
+z_index = 2
+position = Vector2(1584, 1499)
+
+[node name="LabelName" parent="NPC_harold/CharacterBody2D" index="0"]
+text = "Harold"
+
 [editable path="Player"]
+[editable path="NPC_matylda"]
+[editable path="NPC_harold"]

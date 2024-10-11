@@ -16,7 +16,7 @@ func get_mouse_wheel_reset_input() -> bool:
 	var value = int(Input.is_action_just_pressed("Player_Zoom_Camera_Reset"))
 	return value
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var mouse_wheel_input = get_mouse_wheel_input()
 	zoom_current += mouse_wheel_input * PI / 16
 	zoom_current = clamp(zoom_current, zoom_min, zoom_max)
