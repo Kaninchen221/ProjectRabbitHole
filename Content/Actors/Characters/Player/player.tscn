@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://fo4f11t4r7qa"]
 
-[ext_resource type="Script" path="res://Content/Actors/Characters/Player/player.gd" id="1_m41uf"]
+[ext_resource type="Script" path="res://Content/Actors/Characters/Player/Scripts/player.gd" id="1_m41uf"]
 [ext_resource type="SpriteFrames" uid="uid://ce6ulepsxv4r1" path="res://Content/Actors/Characters/Player/player.tres" id="1_pg0bq"]
-[ext_resource type="Script" path="res://Content/Actors/Characters/Player/camera_2d.gd" id="3_8p05n"]
-[ext_resource type="Script" path="res://Content/Actors/Characters/Player/debug_info.gd" id="3_t1gfu"]
+[ext_resource type="Script" path="res://Content/Actors/Characters/Player/Scripts/camera_2d.gd" id="3_8p05n"]
+[ext_resource type="Script" path="res://Content/Actors/Characters/Player/Scripts/debug_info.gd" id="3_t1gfu"]
 [ext_resource type="PackedScene" uid="uid://ce4mc1cu44lx8" path="res://Content/Actors/Light/DayNight/DayNight.tscn" id="5_8ytfh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lkboc"]
@@ -35,7 +35,8 @@ shape = SubResource("RectangleShape2D_lkboc")
 zoom = Vector2(3, 3)
 script = ExtResource("3_8p05n")
 
-[node name="Label" type="Label" parent="CharacterBody2D"]
+[node name="FPSCounter" type="Label" parent="CharacterBody2D"]
+visible = false
 z_index = 100
 offset_left = -191.0
 offset_top = -108.0
