@@ -35,7 +35,7 @@ tile_set = ExtResource("1_c5oju")
 
 [node name="Player" parent="." groups=["Characters"] instance=ExtResource("3_ps5i1")]
 z_index = 2
-position = Vector2(1449, 1427)
+position = Vector2(1574, 1545)
 
 [node name="DayNight" parent="Player/CharacterBody2D" index="4"]
 energy = 0.1

@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://sxs2n1v5iuut"]
+
+[ext_resource type="Script" path="res://Content/GUI/Terminal/terminal_context.gd" id="1_8x54j"]
+[ext_resource type="Script" path="res://Content/GUI/Terminal/text_input.gd" id="1_y8f74"]
+[ext_resource type="Script" path="res://Content/GUI/Scripts/resizer.gd" id="3_yk4wu"]
+
+[node name="Terminal" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TerminalContext" type="RichTextLabel" parent="HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/normal_font_size = 12
+script = ExtResource("1_8x54j")
+
+[node name="TextInput" type="LineEdit" parent="HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 12
+script = ExtResource("1_y8f74")
+
+[node name="Resizer" type="Button" parent="HBoxContainer" node_paths=PackedStringArray("target")]
+layout_mode = 2
+script = ExtResource("3_yk4wu")
+target = NodePath("../..")
