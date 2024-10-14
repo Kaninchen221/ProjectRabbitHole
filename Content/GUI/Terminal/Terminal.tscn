@@ -14,11 +14,20 @@ grow_vertical = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="TerminalContext" type="RichTextLabel" parent="HBoxContainer/VBoxContainer"]
+[node name="TerminalContext" type="RichTextLabel" parent="HBoxContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
@@ -27,7 +36,7 @@ theme_override_font_sizes/bold_italics_font_size = 0
 theme_override_font_sizes/normal_font_size = 12
 script = ExtResource("1_8x54j")
 
-[node name="TextInput" type="LineEdit" parent="HBoxContainer/VBoxContainer"]
+[node name="TextInput" type="LineEdit" parent="HBoxContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
