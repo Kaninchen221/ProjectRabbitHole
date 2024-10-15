@@ -17,8 +17,6 @@ func send_message_to_nearest_user(message : String):
 	var nearest_user_range : float = 1000000
 	for user in users_in_range:
 		var distance = global_position.distance_to(user.global_position)
-		#print("Position: ", global_position)
-		#print("Distance to ", user.user_name, ": ", distance)
 		if distance < nearest_user_range:
 			nearest_user = user
 			nearest_user_range = distance

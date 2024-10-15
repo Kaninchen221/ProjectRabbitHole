@@ -1,6 +1,6 @@
 extends Node
 
-func _process(delta):
+func _process(_delta):
 	if not ImGui.Begin("Player Debug Menu"):
 		return
 		
