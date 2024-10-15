@@ -25,7 +25,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/imgui-godot/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 
@@ -82,6 +82,7 @@ Player_Confirm={
 2d_render/layer_1="BlockPlayer"
 2d_physics/layer_1="BlockCharacters"
 2d_physics/layer_2="OverlapCharacters"
+2d_physics/layer_3="Characters"
 
 [rendering]
 
