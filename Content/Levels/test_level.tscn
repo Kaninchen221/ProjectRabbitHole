@@ -37,7 +37,7 @@ tile_set = ExtResource("1_c5oju")
 z_index = 2
 position = Vector2(1574, 1545)
 
-[node name="DayNight" parent="Player/CharacterBody2D" index="4"]
+[node name="DayNight" parent="Player/CharacterBody2D" index="5"]
 energy = 0.1
 min_light_energy = 0.1
 time = 0.153942
@@ -74,16 +74,22 @@ position = Vector2(1492, 1395)
 
 [node name="NPC_matylda" parent="." instance=ExtResource("7_3tsod")]
 z_index = 2
-position = Vector2(1375, 1566)
+position = Vector2(1630, 1479)
 
-[node name="LabelName" parent="NPC_matylda/CharacterBody2D" index="0"]
+[node name="ChatUser" parent="NPC_matylda/CharacterBody2D" index="0"]
+user_name = "Matylda"
+
+[node name="LabelName" parent="NPC_matylda/CharacterBody2D" index="1"]
 text = "Matylda"
 
 [node name="NPC_harold" parent="." instance=ExtResource("7_3tsod")]
 z_index = 2
 position = Vector2(1584, 1499)
 
-[node name="LabelName" parent="NPC_harold/CharacterBody2D" index="0"]
+[node name="ChatUser" parent="NPC_harold/CharacterBody2D" index="0"]
+user_name = "Harold"
+
+[node name="LabelName" parent="NPC_harold/CharacterBody2D" index="1"]
 text = "Harold"
 
 [editable path="Player"]

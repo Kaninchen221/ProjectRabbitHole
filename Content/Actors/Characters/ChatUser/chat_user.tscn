@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtvgm0hjrynok"]
+
+[ext_resource type="Script" path="res://Content/Actors/Characters/ChatUser/chat_user.gd" id="1_tpi32"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75yai"]
+size = Vector2(80, 79.5)
+
+[node name="ChatUser" type="Node2D"]
+script = ExtResource("1_tpi32")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_75yai")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_chat_user_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_chat_user_exited"]
