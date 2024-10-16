@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://fo4f11t4r7qa"]
+[gd_scene load_steps=8 format=3 uid="uid://fo4f11t4r7qa"]
 
 [ext_resource type="Script" path="res://Content/Actors/Characters/Player/Scripts/PlayerDebugMenu.gd" id="1_pbi2s"]
 [ext_resource type="SpriteFrames" uid="uid://ce6ulepsxv4r1" path="res://Content/Actors/Characters/Player/player.tres" id="1_pg0bq"]
 [ext_resource type="Script" path="res://Content/Actors/Characters/Player/Scripts/player.gd" id="1_wcq1c"]
 [ext_resource type="PackedScene" uid="uid://dtvgm0hjrynok" path="res://Content/Actors/Characters/ChatUser/chat_user.tscn" id="2_hv1g1"]
 [ext_resource type="Script" path="res://Content/Actors/Characters/Player/Scripts/camera_2d.gd" id="3_8p05n"]
-[ext_resource type="Script" path="res://Content/Actors/Characters/Player/Scripts/debug_info.gd" id="3_t1gfu"]
 [ext_resource type="PackedScene" uid="uid://ce4mc1cu44lx8" path="res://Content/Actors/Light/DayNight/DayNight.tscn" id="5_8ytfh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lkboc"]
@@ -40,17 +39,6 @@ shape = SubResource("RectangleShape2D_lkboc")
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(3, 3)
 script = ExtResource("3_8p05n")
-
-[node name="FPSCounter" type="Label" parent="CharacterBody2D"]
-visible = false
-z_index = 100
-offset_left = -191.0
-offset_top = -108.0
-offset_right = -97.0
-offset_bottom = -85.0
-scale = Vector2(0.5, 0.5)
-text = "FPS Counter"
-script = ExtResource("3_t1gfu")
 
 [node name="DayNight" parent="CharacterBody2D" instance=ExtResource("5_8ytfh")]
 scale = Vector2(0.147461, 0.0947695)
