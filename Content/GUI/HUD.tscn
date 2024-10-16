@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://douwm6nqj0g32"]
 
 [ext_resource type="Script" path="res://Content/GUI/Scripts/hud.gd" id="1_tkqau"]
-[ext_resource type="PackedScene" uid="uid://ce5jwi13biqjb" path="res://Content/Levels/test_level.tscn" id="2_78s64"]
+[ext_resource type="PackedScene" uid="uid://ce5jwi13biqjb" path="res://Content/Levels/TestLevel.tscn" id="2_78s64"]
 [ext_resource type="PackedScene" uid="uid://sxs2n1v5iuut" path="res://Content/GUI/Terminal/Terminal.tscn" id="3_a58yh"]
 [ext_resource type="PackedScene" uid="uid://2a33mpolps76" path="res://Content/GUI/PlayerStatus.tscn" id="4_7j1cr"]
 
@@ -21,7 +21,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(1152, 648)
 render_target_update_mode = 4
 
 [node name="PanelContainer" type="PanelContainer" parent="SubViewportContainer/SubViewport"]
@@ -49,7 +49,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer/SubViewport/PanelContainer/GridContainer/Game"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(970, 648)
 render_target_update_mode = 4
 
 [node name="TestLevel" parent="SubViewportContainer/SubViewport/PanelContainer/GridContainer/Game/SubViewport" instance=ExtResource("2_78s64")]
