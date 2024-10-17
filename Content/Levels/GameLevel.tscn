@@ -1,7 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpkvw42fiqdlo"]
+[gd_scene load_steps=3 format=3 uid="uid://bpkvw42fiqdlo"]
 
 [ext_resource type="PackedScene" uid="uid://ce5jwi13biqjb" path="res://Content/Levels/TestLevel.tscn" id="1_1xccu"]
+[ext_resource type="PackedScene" uid="uid://fo4f11t4r7qa" path="res://Content/Actors/Characters/Player/player.tscn" id="2_dffeq"]
 
 [node name="GameLevel" type="Node2D"]
+z_as_relative = false
+y_sort_enabled = true
 
 [node name="TestLevel" parent="." instance=ExtResource("1_1xccu")]
+z_as_relative = false
+
+[node name="Player2" parent="." instance=ExtResource("2_dffeq")]
+position = Vector2(151, 71)
+
+[node name="AnimatedSprite2D" parent="Player2/CharacterBody2D" index="1"]
+z_as_relative = false
+
+[editable path="Player2"]

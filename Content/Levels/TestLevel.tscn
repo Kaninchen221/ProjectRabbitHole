@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://ce5jwi13biqjb"]
+[gd_scene load_steps=7 format=4 uid="uid://ce5jwi13biqjb"]
 
 [ext_resource type="TileSet" uid="uid://crb2kttog7l1l" path="res://Content/TileSets/Legacy.tres" id="1_c5oju"]
 [ext_resource type="TileSet" uid="uid://bjsmiaxkqstgo" path="res://Content/TileSets/Ground.tres" id="1_gths5"]
 [ext_resource type="PackedScene" uid="uid://lgg34idlyc6l" path="res://Content/Actors/Campfire/campfire.tscn" id="2_p44cn"]
-[ext_resource type="PackedScene" uid="uid://fo4f11t4r7qa" path="res://Content/Actors/Characters/Player/player.tscn" id="3_ps5i1"]
 [ext_resource type="PackedScene" uid="uid://brgsfrxy8anod" path="res://Content/Actors/Houses/village_house_0.tscn" id="4_qks4f"]
 [ext_resource type="PackedScene" uid="uid://dsqy6xpl5oum2" path="res://Content/Actors/Tree/Tree.tscn" id="5_83k7g"]
 [ext_resource type="PackedScene" uid="uid://cny30xr18rqqo" path="res://Content/Actors/Characters/NPC/npc.tscn" id="7_3tsod"]
@@ -34,25 +33,15 @@ tile_set = ExtResource("1_gths5")
 tile_map_data = PackedByteArray("AABWAFYAAAAAAAwAAABYAGUAAAABAA0AAABXAGUAAAADAA0AAABUAGUAAAADAA0AAABWAGUAAAABAA0AAABVAGUAAAACAA0AAABgAFgAAAAAAAwAAABiAFIAAAAAAAwAAABlAGUAAAAAAAwAAABeAGQAAAAAAAwAAABZAF8AAAAAAAwAAABSAFsAAAAAAAwAAABeAFsAAAACAAwAAABdAFgAAAACAAwAAABVAFkAAAACAAwAAABTAFcAAAACAAwAAABjAFUAAAACAAwAAABVAGkAAAABAAwAAABdAGUAAAABAAwAAABiAGMAAAABAAwAAABWAF0AAAABAAwAAABVAFIAAAABAAwAAABhAFYAAAABAAwAAAA=")
 tile_set = ExtResource("1_c5oju")
 
-[node name="Player" parent="." groups=["Characters"] instance=ExtResource("3_ps5i1")]
-z_index = 2
-position = Vector2(143, 107)
-
-[node name="DayNight" parent="Player/CharacterBody2D" index="4"]
-energy = 0.1
-min_light_energy = 0.1
-time = 0.153942
-
 [node name="Campfire" parent="." instance=ExtResource("2_p44cn")]
-z_index = 2
 y_sort_enabled = true
 position = Vector2(-254, -86)
 
 [node name="Campfire2" parent="." instance=ExtResource("2_p44cn")]
-z_index = 2
 y_sort_enabled = true
 
 [node name="Houses" type="Node2D" parent="."]
+z_as_relative = false
 y_sort_enabled = true
 position = Vector2(-1431, -1438)
 
@@ -74,7 +63,6 @@ position = Vector2(1607, 1515)
 position = Vector2(61, -43)
 
 [node name="NPC_matylda" parent="." instance=ExtResource("7_3tsod")]
-z_index = 2
 position = Vector2(199, 41)
 
 [node name="ChatUser" parent="NPC_matylda/CharacterBody2D" index="0"]
@@ -84,7 +72,6 @@ user_name = "Matylda"
 text = "Matylda"
 
 [node name="NPC_harold" parent="." instance=ExtResource("7_3tsod")]
-z_index = 2
 position = Vector2(153, 61)
 
 [node name="ChatUser" parent="NPC_harold/CharacterBody2D" index="0"]
@@ -93,6 +80,5 @@ user_name = "Harold"
 [node name="LabelName" parent="NPC_harold/CharacterBody2D" index="1"]
 text = "Harold"
 
-[editable path="Player"]
 [editable path="NPC_matylda"]
 [editable path="NPC_harold"]

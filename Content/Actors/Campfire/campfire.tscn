@@ -8,10 +8,13 @@ texture_filter = 1
 
 [node name="PointLight" parent="." instance=ExtResource("1_chxeb")]
 position = Vector2(0, -1)
+energy = 0.282042
 min_light_energy = 0.108
 max_light_energy = 0.438
+direction_light_energy = -1.0
 pause = false
 time_modifier = 0.1
+time = 0.636899
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true

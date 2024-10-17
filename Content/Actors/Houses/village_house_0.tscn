@@ -7,27 +7,25 @@ y_sort_enabled = true
 texture_filter = 1
 
 [node name="Floor" type="TileMapLayer" parent="."]
-z_index = 1
+y_sort_enabled = true
 use_parent_material = true
 tile_map_data = PackedByteArray("AAD8//z/AgACAAEAAAD8//3/AgACAAEAAAD8//7/AgACAAEAAAD8////AgACAAEAAAD8/wAAAgACAAEAAAD9//z/AgACAAEAAAD9//3/AgACAAEAAAD9//7/AgACAAEAAAD9////AgACAAEAAAD9/wAAAgACAAEAAAD+//z/AgACAAEAAAD+//3/AgACAAEAAAD+//7/AgACAAEAAAD+////AgACAAEAAAD+/wAAAgACAAEAAAD///z/AgACAAEAAAD///3/AgACAAEAAAD///7/AgACAAEAAAD/////AgACAAEAAAD//wAAAgACAAEAAAAAAPz/AgACAAEAAAAAAP3/AgACAAEAAAAAAP7/AgACAAEAAAAAAP//AgACAAEAAAAAAAAAAgACAAEAAAABAPz/AgACAAEAAAABAP3/AgACAAEAAAABAP7/AgACAAEAAAABAP//AgACAAEAAAABAAAAAgACAAEAAAACAPz/AgACAAEAAAACAP3/AgACAAEAAAACAP7/AgACAAEAAAACAP//AgACAAEAAAACAAAAAgACAAEAAAD9/wEAAgACAAEAAAD+/wEAAgACAAEAAAA=")
 tile_set = ExtResource("1_c5oju")
+y_sort_origin = -100
 
 [node name="Walls_Side" type="TileMapLayer" parent="."]
-z_index = 2
 y_sort_enabled = true
 use_parent_material = true
 tile_map_data = PackedByteArray("AAD7/wAAAQAAAAEAAAD7////AQAAAAEAAAD7//7/AQAAAAEAAAD7//3/AQAAAAEAAAD7//z/AQAAAAEAAAADAAAAAQACAAEAAAADAP//AQACAAEAAAADAP7/AQACAAEAAAADAP3/AQACAAEAAAADAPz/AQACAAEAAAA=")
 tile_set = ExtResource("1_c5oju")
 
 [node name="Walls_Front" type="TileMapLayer" parent="."]
-z_index = 2
 y_sort_enabled = true
 use_parent_material = true
 tile_map_data = PackedByteArray("AAD7/wEAAQAAAAIAAAD8/wEAAQABAAQAAAD//wEAAQADAAQAAAAAAAEAAQABAAIAAAABAAEAAQABAAIAAAACAAEAAQABAAIAAAADAAEAAQACAAIAAAA=")
 tile_set = ExtResource("1_c5oju")
 
 [node name="Walls_Back" type="TileMapLayer" parent="."]
-z_index = 2
 y_sort_enabled = true
 use_parent_material = true
 tile_map_data = PackedByteArray("AAD8//v/AQABAAAAAAD9//v/AQABAAAAAAD+//v/AQABAAAAAAD///v/AQABAAAAAAAAAPv/AQABAAAAAAABAPv/AQABAAAAAAACAPv/AQABAAAAAAADAPv/AQACAAAAAAD7//v/AQAAAAAAAAA=")
