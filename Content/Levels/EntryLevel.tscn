@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpfplo6ng73dm"]
+
+[ext_resource type="PackedScene" uid="uid://douwm6nqj0g32" path="res://Content/GUI/HUD.tscn" id="1_ipwdo"]
+[ext_resource type="PackedScene" uid="uid://bpkvw42fiqdlo" path="res://Content/Levels/GameLevel.tscn" id="2_dfrih"]
+
+[node name="EntryLevel" type="Node2D"]
+
+[node name="HUD" parent="." instance=ExtResource("1_ipwdo")]
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="SubViewport" parent="HUD/SubViewportContainer" index="0"]
+size = Vector2i(1280, 720)
+
+[node name="PanelContainer" parent="HUD/SubViewportContainer/SubViewport" index="0"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SubViewportGame" parent="HUD/SubViewportContainer/SubViewport/PanelContainer/GridContainer/SubViewportContainerGame" index="0"]
+size = Vector2i(1098, 720)
+
+[node name="GameLevel" parent="HUD/SubViewportContainer/SubViewport/PanelContainer/GridContainer/SubViewportContainerGame/SubViewportGame" index="0" instance=ExtResource("2_dfrih")]
+
+[editable path="HUD"]
