@@ -1,11 +1,10 @@
-[gd_resource type="SpriteFrames" load_steps=19 format=3 uid="uid://ce6ulepsxv4r1"]
+[gd_resource type="SpriteFrames" load_steps=18 format=3 uid="uid://ce6ulepsxv4r1"]
 
-[ext_resource type="Texture2D" uid="uid://743fvadrn3of" path="res://Content/Actors/Characters/NPC/npcs.png" id="1_raffa"]
 [ext_resource type="Texture2D" uid="uid://bi1yw4h1nwism" path="res://Content/Actors/Characters/Player/player.png" id="1_voc0r"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1ayxq"]
-atlas = ExtResource("1_raffa")
-region = Rect2(0, 0, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_gc2jq"]
+atlas = ExtResource("1_voc0r")
+region = Rect2(16, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sg087"]
 atlas = ExtResource("1_voc0r")
@@ -71,7 +70,7 @@ region = Rect2(0, 16, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1ayxq")
+"texture": SubResource("AtlasTexture_gc2jq")
 }],
 "loop": true,
 "name": &"Idle_Down",
