@@ -12,6 +12,7 @@ signal on_sent_message(sender, message)
 
 func send_message_to_nearest_user(message : String):
 	if not users_in_range:
+		on_sent_message.emit(self, message)
 		return
 
 	var nearest_user = null
@@ -28,6 +29,7 @@ func send_message_to_nearest_user(message : String):
 
 func send_message_to_all_users_in_range(message : String):
 	if not users_in_range:
+		on_sent_message.emit(self, message)
 		return
 
 	for user in users_in_range:
