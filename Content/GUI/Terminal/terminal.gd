@@ -9,7 +9,7 @@ func _ready() -> void:
 	%TextInput.on_sent_text.connect(_on_text_input_sent_text)
 
 
-func _on_player_sent_message(sender: Variant, message: Variant) -> void:
+func _on_player_sent_message(_sender: Variant, message: Variant) -> void:
 	%TerminalContext.add_entry("Player", message)
 
 
