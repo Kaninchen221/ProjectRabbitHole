@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dtvgm0hjrynok"]
 
-[ext_resource type="Script" path="res://Content/Actors/Characters/ChatUser/chat_user.gd" id="1_tpi32"]
+[ext_resource type="Script" path="res://Content/Actors/Characters/ChatUser/ChatUser.gd" id="1_tpi32"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_75yai"]
 size = Vector2(80, 79.5)

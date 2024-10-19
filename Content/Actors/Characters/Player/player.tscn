@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Content/Actors/Characters/Player/Scripts/PlayerDebugMenu.gd" id="1_pbi2s"]
 [ext_resource type="SpriteFrames" uid="uid://ce6ulepsxv4r1" path="res://Content/Actors/Characters/Player/player.tres" id="1_pg0bq"]
 [ext_resource type="Script" path="res://Content/Actors/Characters/Player/Scripts/player.gd" id="1_wcq1c"]
-[ext_resource type="PackedScene" uid="uid://dtvgm0hjrynok" path="res://Content/Actors/Characters/ChatUser/chat_user.tscn" id="2_hv1g1"]
+[ext_resource type="PackedScene" uid="uid://dtvgm0hjrynok" path="res://Content/Actors/Characters/ChatUser/ChatUser.tscn" id="2_hv1g1"]
 [ext_resource type="Script" path="res://Content/Actors/Characters/Player/Scripts/camera_2d.gd" id="3_8p05n"]
 [ext_resource type="PackedScene" uid="uid://ce4mc1cu44lx8" path="res://Content/Actors/Light/DayNight/DayNight.tscn" id="5_8ytfh"]
 
