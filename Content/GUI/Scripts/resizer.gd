@@ -6,6 +6,9 @@ var target : Container
 @export_range(0, 2000)
 var starting_custom_minimum_size : float = 200
 
+@export_range(-1, 1, 2)
+var direction : float = 1
+
 var max_custom_minimum_size : float = 6000 :
 	get():
 		var viewport = get_viewport()
@@ -24,7 +27,7 @@ func _process(_delta: float) -> void:
 	
 	var mouse_position = get_local_mouse_position()
 	
-	var custom_minimum_size_x = target.custom_minimum_size.x + mouse_position.x
+	var custom_minimum_size_x = target.custom_minimum_size.x + mouse_position.x * direction
 	# Fix sticky effect
 	target.custom_minimum_size.x = clamp(custom_minimum_size_x, 
 										target.get_minimum_size().x, 

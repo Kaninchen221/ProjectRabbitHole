@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Content/GUI/Scripts/hud.gd" id="1_tkqau"]
 [ext_resource type="PackedScene" uid="uid://sxs2n1v5iuut" path="res://Content/GUI/Terminal/Terminal.tscn" id="3_a58yh"]
-[ext_resource type="PackedScene" uid="uid://2a33mpolps76" path="res://Content/GUI/PlayerStatus.tscn" id="4_7j1cr"]
+[ext_resource type="PackedScene" uid="uid://2a33mpolps76" path="res://Content/GUI/PlayerStatus/PlayerStatus.tscn" id="4_7j1cr"]
 
 [node name="PanelContainer" type="PanelContainer"]
 anchors_preset = 15

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cny30xr18rqqo"]
 
-[ext_resource type="PackedScene" uid="uid://dtvgm0hjrynok" path="res://Content/Actors/Characters/ChatUser/chat_user.tscn" id="1_b8v2k"]
+[ext_resource type="PackedScene" uid="uid://dtvgm0hjrynok" path="res://Content/Actors/Characters/ChatUser/ChatUser.tscn" id="1_b8v2k"]
 [ext_resource type="Script" path="res://Content/Scripts/HideUnhide.gd" id="1_favkk"]
 [ext_resource type="SpriteFrames" uid="uid://ce6ulepsxv4r1" path="res://Content/Actors/Characters/Player/player.tres" id="2_0mwdw"]
 
