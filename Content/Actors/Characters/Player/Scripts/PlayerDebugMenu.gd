@@ -6,10 +6,26 @@ func _process(_delta):
 		
 	ImGui.Text("FPS: %d" % Engine.get_frames_per_second())
 		
-	if ImGui.Button("Send test message to nearest user"):
-		%ChatUser.send_message_to_nearest_user("Test Message")
-		
-	if ImGui.Button("Send test message to all users in range"):
-		%ChatUser.send_message_to_all_users_in_range("Test Message")
+	chat_user_debug_menu()
 	
 	ImGui.End()
+
+func chat_user_debug_menu():
+	if ImGui.CollapsingHeader("Chat User"):
+		horizontal_space()
+		if ImGui.CollapsingHeader("Send test message to nearest user"):
+			horizontal_space()
+			if ImGui.Button("Hi"):
+				%ChatUser.send_message_to_nearest_user("Hi")
+			ImGui.SameLine()
+			if ImGui.Button("Bye"):
+				%ChatUser.send_message_to_nearest_user("Bye")
+		
+		if ImGui.CollapsingHeader("Send test message to all users in range"):
+			if ImGui.Button("Test Message"):
+				%ChatUser.send_message_to_all_users_in_range("Test Message")
+
+func horizontal_space():
+	ImGui.Text("\t")
+	ImGui.SameLine()
+	

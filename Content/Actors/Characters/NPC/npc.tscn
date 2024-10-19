@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cny30xr18rqqo"]
+[gd_scene load_steps=7 format=3 uid="uid://cny30xr18rqqo"]
 
 [ext_resource type="PackedScene" uid="uid://dtvgm0hjrynok" path="res://Content/Actors/Characters/ChatUser/ChatUser.tscn" id="1_b8v2k"]
 [ext_resource type="Script" path="res://Content/Scripts/HideUnhide.gd" id="1_favkk"]
 [ext_resource type="SpriteFrames" uid="uid://ce6ulepsxv4r1" path="res://Content/Actors/Characters/Player/player.tres" id="2_0mwdw"]
+[ext_resource type="Script" path="res://Content/Actors/Characters/NPC/Scripts/NPCConversation.gd" id="4_c4hgd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3invy"]
 size = Vector2(14, 5)
@@ -18,6 +19,7 @@ texture_filter = 1
 position = Vector2(0, -8)
 
 [node name="ChatUser" parent="CharacterBody2D" instance=ExtResource("1_b8v2k")]
+unique_name_in_owner = true
 user_name = "NPC"
 should_log_received_message = true
 
@@ -60,5 +62,12 @@ input_pickable = false
 scale = Vector2(1.00327, 1)
 shape = SubResource("RectangleShape2D_omjua")
 
+[node name="ReactToChatUser" type="Node2D" parent="CharacterBody2D"]
+script = ExtResource("4_c4hgd")
+
+[connection signal="on_chat_user_exited" from="CharacterBody2D/ChatUser" to="CharacterBody2D/ReactToChatUser" method="_on_chat_user_exited"]
+[connection signal="on_received_message" from="CharacterBody2D/ChatUser" to="CharacterBody2D/ReactToChatUser" method="_on_chat_user_received_message"]
 [connection signal="body_entered" from="CharacterBody2D/Visibility" to="CharacterBody2D/LabelName" method="_on_visibility_body_entered"]
 [connection signal="body_exited" from="CharacterBody2D/Visibility" to="CharacterBody2D/LabelName" method="_on_visibility_body_exited"]
+
+[editable path="CharacterBody2D/ChatUser"]

@@ -10,9 +10,12 @@ var users_in_range = []
 signal on_received_message(sender, message)
 signal on_sent_message(sender, message)
 
+signal on_chat_user_exited(chat_user)
+
 func send_message_to_nearest_user(message : String):
+	on_sent_message.emit(self, message)
+	
 	if not users_in_range:
-		on_sent_message.emit(self, message)
 		return
 
 	var nearest_user = null
@@ -24,18 +27,15 @@ func send_message_to_nearest_user(message : String):
 			nearest_user_range = distance
 
 	nearest_user.receive_message(self, message)
-	
-	on_sent_message.emit(self, message)
 
 func send_message_to_all_users_in_range(message : String):
+	on_sent_message.emit(self, message)
+	
 	if not users_in_range:
-		on_sent_message.emit(self, message)
 		return
 
 	for user in users_in_range:
 		user.receive_message(self, message)
-		
-	on_sent_message.emit(self, message)
 
 
 func receive_message(sender : Node2D, message : String):
@@ -56,6 +56,7 @@ func _on_chat_user_exited(area: Area2D) -> void:
 	users_in_range.erase(area.owner)
 	if should_log_chat_users:
 		log_chat_users()
+	on_chat_user_exited.emit(area.owner)
 
 
 func log_chat_users():

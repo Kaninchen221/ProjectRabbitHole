@@ -50,3 +50,5 @@ script = ExtResource("1_y8f74")
 layout_mode = 2
 script = ExtResource("3_yk4wu")
 target = NodePath("../..")
+
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
