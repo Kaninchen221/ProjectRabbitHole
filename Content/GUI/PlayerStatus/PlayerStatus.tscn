@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://2a33mpolps76"]
 
-[ext_resource type="Script" path="res://Content/GUI/Scripts/resizer.gd" id="1_mmh6i"]
+[ext_resource type="Script" path="res://Content/GUI/Scripts/ContainerResizer.gd" id="1_mmh6i"]
 [ext_resource type="StyleBox" uid="uid://cq5snhngjo6rw" path="res://Content/GUI/PlayerStatus/ProgressBarStyleBoxFlat.tres" id="2_8qvum"]
 
 [node name="PlayerStatus" type="PanelContainer"]

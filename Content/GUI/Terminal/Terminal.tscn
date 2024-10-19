@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Content/GUI/Terminal/terminal_context.gd" id="1_8x54j"]
 [ext_resource type="Script" path="res://Content/GUI/Terminal/terminal.gd" id="1_lahqw"]
 [ext_resource type="Script" path="res://Content/GUI/Terminal/text_input.gd" id="1_y8f74"]
-[ext_resource type="Script" path="res://Content/GUI/Scripts/resizer.gd" id="3_yk4wu"]
+[ext_resource type="Script" path="res://Content/GUI/Scripts/ContainerResizer.gd" id="3_yk4wu"]
 
 [node name="Terminal" type="PanelContainer"]
 anchors_preset = 15
