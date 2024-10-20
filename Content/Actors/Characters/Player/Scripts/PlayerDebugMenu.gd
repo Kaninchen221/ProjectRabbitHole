@@ -2,6 +2,7 @@ extends Node
 
 func _process(_delta):
 	if not ImGui.Begin("Player Debug Menu"):
+		ImGui.End()
 		return
 		
 	ImGui.Text("FPS: %d" % Engine.get_frames_per_second())
