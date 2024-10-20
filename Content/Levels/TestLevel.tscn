@@ -63,7 +63,7 @@ position = Vector2(1607, 1515)
 position = Vector2(61, -43)
 
 [node name="NPC_matylda" parent="." instance=ExtResource("7_3tsod")]
-position = Vector2(199, 41)
+position = Vector2(-57, 127)
 
 [node name="ChatUser" parent="NPC_matylda/CharacterBody2D" index="0"]
 user_name = "Matylda"
@@ -81,4 +81,6 @@ user_name = "Harold"
 text = "Harold"
 
 [editable path="NPC_matylda"]
+[editable path="NPC_matylda/CharacterBody2D/ChatUser"]
 [editable path="NPC_harold"]
+[editable path="NPC_harold/CharacterBody2D/ChatUser"]

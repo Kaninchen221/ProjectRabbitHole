@@ -25,6 +25,9 @@ script = ExtResource("1_wcq1c")
 unique_name_in_owner = true
 user_name = "Player"
 
+[node name="CollisionShape2D" parent="CharacterBody2D/ChatUser/Area2D" index="0"]
+scale = Vector2(0.2, 0.2)
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 unique_name_in_owner = true
 y_sort_enabled = true
@@ -53,3 +56,5 @@ scale = Vector2(0.147461, 0.0947695)
 max_light_energy = 0.9
 time_modifier = 0.1
 time = 0.22
+
+[editable path="CharacterBody2D/ChatUser"]

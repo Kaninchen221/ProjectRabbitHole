@@ -10,10 +10,5 @@ y_sort_enabled = true
 [node name="TestLevel" parent="." instance=ExtResource("1_1xccu")]
 z_as_relative = false
 
-[node name="Player2" parent="." instance=ExtResource("2_dffeq")]
-position = Vector2(151, 71)
-
-[node name="AnimatedSprite2D" parent="Player2/CharacterBody2D" index="1"]
-z_as_relative = false
-
-[editable path="Player2"]
+[node name="Player" parent="." instance=ExtResource("2_dffeq")]
+position = Vector2(145, 115)

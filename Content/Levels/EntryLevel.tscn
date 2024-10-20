@@ -9,21 +9,16 @@
 offset_right = 1280.0
 offset_bottom = 720.0
 
-[node name="SubViewport" parent="HUD/SubViewportContainer" index="0"]
-size = Vector2i(2, 2)
-
 [node name="PanelContainer" parent="HUD/SubViewportContainer/SubViewport" index="0"]
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Terminal" parent="HUD/SubViewportContainer/SubViewport/PanelContainer/GridContainer" index="0" node_paths=PackedStringArray("PlayerChatUser")]
-PlayerChatUser = NodePath("../SubViewportContainerGame/SubViewportGame/GameLevel/Player2/CharacterBody2D/ChatUser")
-
-[node name="SubViewportGame" parent="HUD/SubViewportContainer/SubViewport/PanelContainer/GridContainer/SubViewportContainerGame" index="0"]
-size = Vector2i(2, 2)
+PlayerChatUser = NodePath("../SubViewportContainerGame/SubViewportGame/GameLevel/Player/CharacterBody2D/ChatUser")
 
 [node name="GameLevel" parent="HUD/SubViewportContainer/SubViewport/PanelContainer/GridContainer/SubViewportContainerGame/SubViewportGame" index="0" instance=ExtResource("2_dfrih")]
 
 [editable path="HUD"]
 [editable path="HUD/SubViewportContainer/SubViewport/PanelContainer/GridContainer/SubViewportContainerGame/SubViewportGame/GameLevel"]
-[editable path="HUD/SubViewportContainer/SubViewport/PanelContainer/GridContainer/SubViewportContainerGame/SubViewportGame/GameLevel/Player2"]
+[editable path="HUD/SubViewportContainer/SubViewport/PanelContainer/GridContainer/SubViewportContainerGame/SubViewportGame/GameLevel/Player"]
+[editable path="HUD/SubViewportContainer/SubViewport/PanelContainer/GridContainer/SubViewportContainerGame/SubViewportGame/GameLevel/Player/CharacterBody2D/ChatUser"]
